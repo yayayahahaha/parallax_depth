@@ -9,15 +9,24 @@ $h: 100vw;
 	padding: 0px;
 }
 body {
-	.container {
-		height: 300px;
-		width: 100%;
+	overflow: scroll;
 
-		overflow: scroll;
-
-		.content{
-			height: 200vh;
-			border: 1px solid blue;
-		}
+	.parallax {
+		border: 1px solid rgba(0, 0, 0, 0.5);
+		height: $w * 0.6;
+		@include box-sizing(border-box);
+		background-size: 120% auto;
+	}
+	.parallax:nth-child(1) {
+		background-image: url("../R.jpg");
+	}
+	.parallax:nth-child(2) {
+		background-image: url("../W.jpg");
+	}
+	.parallax:nth-child(3) {
+		background-image: url("../B.jpg");
+	}
+	.parallax:nth-child(4) {
+		background-image: url("../Y.jpg");
 	}
 }

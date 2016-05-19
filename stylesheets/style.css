@@ -69,14 +69,32 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   padding: 0px;
 }
 
-/* line 12, ../sass/style.scss */
-body .container {
-  height: 300px;
-  width: 100%;
+/* line 11, ../sass/style.scss */
+body {
   overflow: scroll;
 }
-/* line 18, ../sass/style.scss */
-body .container .content {
-  height: 200vh;
-  border: 1px solid blue;
+/* line 14, ../sass/style.scss */
+body .parallax {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  height: 60vh;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-size: 120% auto;
+}
+/* line 20, ../sass/style.scss */
+body .parallax:nth-child(1) {
+  background-image: url("../R.jpg");
+}
+/* line 23, ../sass/style.scss */
+body .parallax:nth-child(2) {
+  background-image: url("../W.jpg");
+}
+/* line 26, ../sass/style.scss */
+body .parallax:nth-child(3) {
+  background-image: url("../B.jpg");
+}
+/* line 29, ../sass/style.scss */
+body .parallax:nth-child(4) {
+  background-image: url("../Y.jpg");
 }
