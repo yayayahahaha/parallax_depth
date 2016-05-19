@@ -69,12 +69,26 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   padding: 0px;
 }
 
-/* line 11, ../sass/style.scss */
-body {
-  overflow: scroll;
+@font-face {
+  font-family: RWBY;
+  src: url(https://dl.dropboxusercontent.com/u/92502085/rwby_style.ttf) format("truetype");
 }
-/* line 14, ../sass/style.scss */
+/* line 15, ../sass/style.scss */
+body {
+  overflow: scroll hidden;
+  background: black;
+}
+/* line 19, ../sass/style.scss */
+body .title {
+  font-family: Arial;
+  font-size: 3em;
+  height: 80px;
+  color: white;
+}
+/* line 25, ../sass/style.scss */
 body .parallax {
+  font-family: RWBY;
+  font-size: 3em;
   border: 1px solid rgba(0, 0, 0, 0.5);
   height: 60vh;
   -moz-box-sizing: border-box;
@@ -82,19 +96,41 @@ body .parallax {
   box-sizing: border-box;
   background-size: 120% auto;
 }
-/* line 20, ../sass/style.scss */
-body .parallax:nth-child(1) {
+/* line 33, ../sass/style.scss */
+body .parallax:nth-child(2) {
   background-image: url("../R.jpg");
 }
-/* line 23, ../sass/style.scss */
-body .parallax:nth-child(2) {
+/* line 36, ../sass/style.scss */
+body .parallax:nth-child(3) {
+  color: white;
   background-image: url("../W.jpg");
 }
-/* line 26, ../sass/style.scss */
-body .parallax:nth-child(3) {
+/* line 40, ../sass/style.scss */
+body .parallax:nth-child(4) {
   background-image: url("../B.jpg");
 }
-/* line 29, ../sass/style.scss */
-body .parallax:nth-child(4) {
+/* line 43, ../sass/style.scss */
+body .parallax:nth-child(5) {
+  color: white;
   background-image: url("../Y.jpg");
+}
+/* line 48, ../sass/style.scss */
+body .footer {
+  text-align: center;
+  font-family: Arial;
+  font-size: 1em;
+  height: 80px;
+  color: white;
+  vertical-align: middle;
+}
+/* line 56, ../sass/style.scss */
+body .footer a {
+  color: white;
+}
+/* line 60, ../sass/style.scss */
+body .footer:after {
+  display: inline-block;
+  content: "";
+  height: 80px;
+  vertical-align: middle;
 }

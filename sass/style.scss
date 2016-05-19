@@ -8,25 +8,60 @@ $h: 100vw;
 	margin: 0px;
 	padding: 0px;
 }
+@font-face {
+	font-family: RWBY;
+	src: url(https://dl.dropboxusercontent.com/u/92502085/rwby_style.ttf) format("truetype");
+}
 body {
-	overflow: scroll;
+	overflow: scroll hidden;
+	background: black;
 
+	.title {
+		font-family: Arial;
+		font-size: 3em;
+		height: 80px;
+		color: white;
+	}
 	.parallax {
+		font-family: RWBY;
+		font-size: 3em;
 		border: 1px solid rgba(0, 0, 0, 0.5);
 		height: $w * 0.6;
 		@include box-sizing(border-box);
 		background-size: 120% auto;
+
+		&:nth-child(2) {
+			background-image: url("../R.jpg");
+		}
+		&:nth-child(3) {
+			color: white;
+			background-image: url("../W.jpg");
+		}
+		&:nth-child(4) {
+			background-image: url("../B.jpg");
+		}
+		&:nth-child(5) {
+			color:white;
+			background-image: url("../Y.jpg");
+		}
 	}
-	.parallax:nth-child(1) {
-		background-image: url("../R.jpg");
-	}
-	.parallax:nth-child(2) {
-		background-image: url("../W.jpg");
-	}
-	.parallax:nth-child(3) {
-		background-image: url("../B.jpg");
-	}
-	.parallax:nth-child(4) {
-		background-image: url("../Y.jpg");
+	.footer {
+		text-align: center;
+		font-family: Arial;
+		font-size: 1em;
+		height: 80px;
+		color: white;
+		vertical-align: middle;
+		
+		a{
+			color: white;
+		}
+
+		&:after{
+			display: inline-block;
+			content: "";
+			height: 80px;
+			vertical-align: middle;
+		}
 	}
 }
