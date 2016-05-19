@@ -71,51 +71,53 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 @font-face {
   font-family: RWBY;
-  src: url(https://dl.dropboxusercontent.com/u/92502085/rwby_style.ttf) format("truetype");
+  src: Arial;
 }
-/* line 15, ../sass/style.scss */
-body {
-  overflow: scroll hidden;
+/* line 16, ../sass/style.scss */
+.sensor {
+  height: 100vh;
+  overflow-y: scroll;
   background: black;
+  width: 100%;
 }
-/* line 19, ../sass/style.scss */
-body .title {
+/* line 22, ../sass/style.scss */
+.sensor .title {
   font-family: Arial;
   font-size: 3em;
   height: 80px;
   color: white;
 }
-/* line 25, ../sass/style.scss */
-body .parallax {
+/* line 28, ../sass/style.scss */
+.sensor .parallax {
   font-family: RWBY;
   font-size: 3em;
   border: 1px solid rgba(0, 0, 0, 0.5);
-  height: 60vh;
+  height: 70vh;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   background-size: 120% auto;
 }
-/* line 33, ../sass/style.scss */
-body .parallax:nth-child(2) {
+/* line 36, ../sass/style.scss */
+.sensor .parallax:nth-child(2) {
   background-image: url("../R.jpg");
 }
-/* line 36, ../sass/style.scss */
-body .parallax:nth-child(3) {
+/* line 39, ../sass/style.scss */
+.sensor .parallax:nth-child(3) {
   color: white;
   background-image: url("../W.jpg");
 }
-/* line 40, ../sass/style.scss */
-body .parallax:nth-child(4) {
+/* line 43, ../sass/style.scss */
+.sensor .parallax:nth-child(4) {
   background-image: url("../B.jpg");
 }
-/* line 43, ../sass/style.scss */
-body .parallax:nth-child(5) {
+/* line 46, ../sass/style.scss */
+.sensor .parallax:nth-child(5) {
   color: white;
   background-image: url("../Y.jpg");
 }
-/* line 48, ../sass/style.scss */
-body .footer {
+/* line 51, ../sass/style.scss */
+.sensor .footer {
   text-align: center;
   font-family: Arial;
   font-size: 1em;
@@ -123,14 +125,44 @@ body .footer {
   color: white;
   vertical-align: middle;
 }
-/* line 56, ../sass/style.scss */
-body .footer a {
+/* line 59, ../sass/style.scss */
+.sensor .footer a {
   color: white;
 }
-/* line 60, ../sass/style.scss */
-body .footer:after {
+/* line 62, ../sass/style.scss */
+.sensor .footer:after {
   display: inline-block;
   content: "";
   height: 80px;
   vertical-align: middle;
+}
+
+/* line 72, ../sass/style.scss */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* line 76, ../sass/style.scss */
+::-webkit-scrollbar-track {
+  background-color: #ececec;
+}
+
+/* line 79, ../sass/style.scss */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(56, 89, 100, 0.4);
+  border: 2px solid #e3e7f0;
+}
+
+/* line 83, ../sass/style.scss */
+::-webkit-scrollbar-button {
+  height: 0px;
+  background: red;
+  width: 0px;
+}
+
+/* line 88, ../sass/style.scss */
+::-webkit-scrollbar-corner {
+  margin-top: 20px;
+  background-color: #e3e7f1;
 }

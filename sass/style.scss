@@ -1,8 +1,8 @@
 @import "compass/reset";
 @import "compass/css3";
 $backColor: #141414;
-$w: 100vh;
-$h: 100vw;
+$w: 100vw;
+$h: 100vh;
 
 * {
 	margin: 0px;
@@ -10,11 +10,14 @@ $h: 100vw;
 }
 @font-face {
 	font-family: RWBY;
-	src: url(https://dl.dropboxusercontent.com/u/92502085/rwby_style.ttf) format("truetype");
+	src: Arial;
+	// src: url(https://dl.dropboxusercontent.com/u/92502085/rwby_style.ttf) format("truetype");
 }
-body {
-	overflow: scroll hidden;
+.sensor {
+	height: $h;
+	overflow-y: scroll;
 	background: black;
+	width: 100%;
 
 	.title {
 		font-family: Arial;
@@ -26,7 +29,7 @@ body {
 		font-family: RWBY;
 		font-size: 3em;
 		border: 1px solid rgba(0, 0, 0, 0.5);
-		height: $w * 0.6;
+		height: $h * 0.7;
 		@include box-sizing(border-box);
 		background-size: 120% auto;
 
@@ -41,7 +44,7 @@ body {
 			background-image: url("../B.jpg");
 		}
 		&:nth-child(5) {
-			color:white;
+			color: white;
 			background-image: url("../Y.jpg");
 		}
 	}
@@ -52,16 +55,37 @@ body {
 		height: 80px;
 		color: white;
 		vertical-align: middle;
-		
-		a{
+
+		a {
 			color: white;
 		}
-
-		&:after{
+		&:after {
 			display: inline-block;
 			content: "";
 			height: 80px;
 			vertical-align: middle;
 		}
 	}
+}
+
+
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+::-webkit-scrollbar-track {
+	background-color: #ececec;
+}
+::-webkit-scrollbar-thumb {
+	background-color: rgba(56, 89, 100, 0.4);
+	border: 2px solid #e3e7f0;
+}
+::-webkit-scrollbar-button {
+	height: 0px;
+	background: red;
+	width: 0px;
+}
+::-webkit-scrollbar-corner {
+	margin-top: 20px;
+	background-color: #e3e7f1;
 }
