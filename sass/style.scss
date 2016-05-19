@@ -39,50 +39,6 @@ $h: 100vh;
 		@include box-sizing(border-box);
 		background-size: 120% auto;
 		background-attachment: fixed;
-		vertical-align: middle;
-
-		&:hover {
-			& div {
-				opacity: 1;
-			}
-		}
-
-		&:after {
-			display: inline-block;
-			content: "";
-			height: 100%;
-			vertical-align: middle;
-			// border: 1px solid red;
-		}
-
-		.name{
-			@include transition(opacity 0.3s);
-			opacity: 0;
-			background-color: rgba(255,255,255,0.5);
-			padding: 1%;
-			text-align: center;
-			margin: 2%;
-			width: 20%;
-			display: inline-block;
-			vertical-align: middle;
-		}
-
-		.content {
-			@include transition(opacity 0.2s 0.1s);
-			@include box-sizing(border-box);
-			position: relative;
-			opacity: 0;
-			background: rgba(0, 0, 0, 0.6);
-			font-size: 0.5em;
-			font-family: arial;
-			line-height: 1.5em;
-			text-align: justify;
-			color: white;
-			width: 70%;
-			display: inline-block;
-			vertical-align: middle;
-			border: $w*0.05 solid transparent;
-		}
 
 		&:nth-child(2) {
 			background-image: url("../R.jpg");
