@@ -12,6 +12,8 @@ window.onload = function(argument) {
 		console.log("animation done");
 	});;
 
-
+	$(".container").scroll(function(event) {
+		console.log(this.scrollTop);
+	});
 
 }
