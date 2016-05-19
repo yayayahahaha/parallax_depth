@@ -63,7 +63,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 8, ../sass/style.scss */
-body {
-  background-color: #141414;
+/* line 7, ../sass/style.scss */
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* line 12, ../sass/style.scss */
+body .container {
+  height: 300px;
+  width: 100%;
+  overflow: scroll;
+}
+/* line 18, ../sass/style.scss */
+body .container .content {
+  height: 200vh;
+  border: 1px solid blue;
 }

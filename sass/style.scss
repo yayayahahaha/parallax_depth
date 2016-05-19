@@ -1,10 +1,23 @@
 @import "compass/reset";
 @import "compass/css3";
-
 $backColor: #141414;
 $w: 100vh;
 $h: 100vw;
 
-body{
-	background-color: $backColor;
+* {
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	.container {
+		height: 300px;
+		width: 100%;
+
+		overflow: scroll;
+
+		.content{
+			height: 200vh;
+			border: 1px solid blue;
+		}
+	}
 }
