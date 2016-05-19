@@ -8,11 +8,7 @@ $h: 100vh;
 	margin: 0px;
 	padding: 0px;
 }
-@font-face {
-	font-family: RWBY;
-	src: Arial;
-	// src: url(https://dl.dropboxusercontent.com/u/92502085/rwby_style.ttf) format("truetype");
-}
+
 .sensor {
 	height: $h;
 	overflow-y: scroll;
@@ -20,18 +16,73 @@ $h: 100vh;
 	width: 100%;
 
 	.title {
-		font-family: Arial;
+		font-family: Arial;	
 		font-size: 3em;
 		height: 80px;
 		color: white;
+		vertical-align: middle;
+		text-align: center;
+		&:after{
+			vertical-align: middle;
+			display:inline-block;
+			content: '';
+			height: 100%;
+		}
 	}
 	.parallax {
-		font-family: RWBY;
+		overflow: hidden;
+
+		font-family: arial;
 		font-size: 3em;
 		border: 1px solid rgba(0, 0, 0, 0.5);
 		height: $h * 0.7;
 		@include box-sizing(border-box);
 		background-size: 120% auto;
+		background-attachment: fixed;
+		vertical-align: middle;
+
+		&:hover {
+			& div {
+				opacity: 1;
+			}
+		}
+
+		&:after {
+			display: inline-block;
+			content: "";
+			height: 100%;
+			vertical-align: middle;
+			// border: 1px solid red;
+		}
+
+		.name{
+			@include transition(opacity 0.3s);
+			opacity: 0;
+			background-color: rgba(255,255,255,0.5);
+			padding: 1%;
+			text-align: center;
+			margin: 2%;
+			width: 20%;
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		.content {
+			@include transition(opacity 0.2s 0.1s);
+			@include box-sizing(border-box);
+			position: relative;
+			opacity: 0;
+			background: rgba(0, 0, 0, 0.6);
+			font-size: 0.5em;
+			font-family: arial;
+			line-height: 1.5em;
+			text-align: justify;
+			color: white;
+			width: 70%;
+			display: inline-block;
+			vertical-align: middle;
+			border: $w*0.05 solid transparent;
+		}
 
 		&:nth-child(2) {
 			background-image: url("../R.jpg");
@@ -54,7 +105,11 @@ $h: 100vh;
 		font-size: 1em;
 		height: 80px;
 		color: white;
-		vertical-align: middle;
+		div{
+			display: inline-block;
+			vertical-align: middle;
+			line-height: 1.5em;
+		}
 
 		a {
 			color: white;
@@ -67,8 +122,6 @@ $h: 100vh;
 		}
 	}
 }
-
-
 ::-webkit-scrollbar {
 	width: 10px;
 	height: 10px;
