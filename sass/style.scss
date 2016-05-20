@@ -67,6 +67,7 @@ $h: 100vh;
 		background-size: 100% auto;
 		@include transform(rotateZ(-15deg));
 		background-image:url("../T.jpg");
+		background-size: auto 100%;
 
 		@include transition(all 0.3s);
 
