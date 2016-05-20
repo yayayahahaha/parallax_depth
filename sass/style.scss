@@ -22,11 +22,14 @@ $h: 100vh;
 		height: 200%;
 		position: absolute;
 		top: 0px;
+	
+		@include box-shadow(0px 0px 300px black inset);
 
 		@include filter(brightness(100%));
 		@include transition(-webkit-filter 0.5s);
 
 		&:hover{
+			// @include box-shadow(0px 0px 0px black inset);
 			@include filter(brightness(130%));
 		}
 	}
@@ -66,6 +69,7 @@ $h: 100vh;
 		width: $w*0.3;
 		background-size: 100% auto;
 		@include transform(rotateZ(-15deg));
+		background-color: transparent;
 		background-image:url("../T.jpg");
 		background-size: auto 100%;
 

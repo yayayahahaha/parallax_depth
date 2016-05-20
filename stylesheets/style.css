@@ -26,6 +26,9 @@
   height: 200%;
   position: absolute;
   top: 0px;
+  -moz-box-shadow: 0px 0px 300px black inset;
+  -webkit-box-shadow: 0px 0px 300px black inset;
+  box-shadow: 0px 0px 300px black inset;
   -webkit-filter: brightness(100%);
   filter: brightness(100%);
   -moz-transition: -webkit-filter 0.5s;
@@ -33,12 +36,12 @@
   -webkit-transition: -webkit-filter 0.5s;
   transition: -webkit-filter 0.5s;
 }
-/* line 29, ../sass/style.scss */
+/* line 31, ../sass/style.scss */
 .parallax_container .basic_setting:hover {
   -webkit-filter: brightness(130%);
   filter: brightness(130%);
 }
-/* line 33, ../sass/style.scss */
+/* line 36, ../sass/style.scss */
 .parallax_container .parallax_layer_1 {
   -moz-transform: translateZ(-1px) rotateZ(3deg);
   -ms-transform: translateZ(-1px) rotateZ(3deg);
@@ -46,7 +49,7 @@
   transform: translateZ(-1px) rotateZ(3deg);
   background-image: url("../R.jpg");
 }
-/* line 37, ../sass/style.scss */
+/* line 40, ../sass/style.scss */
 .parallax_container .parallax_layer_2 {
   top: -20%;
   left: 43%;
@@ -57,7 +60,7 @@
   transform: translateZ(-10px) rotateZ(-2deg);
   background-image: url("../W.jpg");
 }
-/* line 44, ../sass/style.scss */
+/* line 47, ../sass/style.scss */
 .parallax_container .parallax_layer_3 {
   top: 10%;
   left: 20%;
@@ -67,7 +70,7 @@
   transform: translateZ(-30px) rotateZ(7deg);
   background-image: url("../B.jpg");
 }
-/* line 50, ../sass/style.scss */
+/* line 53, ../sass/style.scss */
 .parallax_container .parallax_layer_4 {
   top: 50%;
   left: -30%;
@@ -80,7 +83,7 @@
   transform: translateZ(-5px) rotateZ(15deg);
   background-image: url("../Y.jpg");
 }
-/* line 59, ../sass/style.scss */
+/* line 62, ../sass/style.scss */
 .parallax_container .parallax_layer_5 {
   outline: 0px;
   border: 0px;
@@ -93,6 +96,7 @@
   -ms-transform: rotateZ(-15deg);
   -webkit-transform: rotateZ(-15deg);
   transform: rotateZ(-15deg);
+  background-color: transparent;
   background-image: url("../T.jpg");
   background-size: auto 100%;
   -moz-transition: all 0.3s;
@@ -100,11 +104,11 @@
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-/* line 74, ../sass/style.scss */
+/* line 78, ../sass/style.scss */
 .parallax_container .parallax_layer_5:hover {
   cursor: pointer;
 }
-/* line 78, ../sass/style.scss */
+/* line 82, ../sass/style.scss */
 .parallax_container .parallax_layer_5:focus {
   cursor: pointer;
   -moz-transform: rotateZ(0deg);
@@ -116,7 +120,7 @@
   width: 80%;
   height: 80%;
 }
-/* line 88, ../sass/style.scss */
+/* line 92, ../sass/style.scss */
 .parallax_container .footer {
   color: white;
   width: 100%;
@@ -124,36 +128,36 @@
   position: absolute;
   top: 210%;
 }
-/* line 96, ../sass/style.scss */
+/* line 100, ../sass/style.scss */
 .parallax_container .footer a {
   color: white;
 }
 
-/* line 102, ../sass/style.scss */
+/* line 106, ../sass/style.scss */
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
 
-/* line 106, ../sass/style.scss */
+/* line 110, ../sass/style.scss */
 ::-webkit-scrollbar-track {
   background-color: #ececec;
 }
 
-/* line 109, ../sass/style.scss */
+/* line 113, ../sass/style.scss */
 ::-webkit-scrollbar-thumb {
   background-color: rgba(56, 89, 100, 0.4);
   border: 2px solid #e3e7f0;
 }
 
-/* line 113, ../sass/style.scss */
+/* line 117, ../sass/style.scss */
 ::-webkit-scrollbar-button {
   height: 0px;
   background: red;
   width: 0px;
 }
 
-/* line 118, ../sass/style.scss */
+/* line 122, ../sass/style.scss */
 ::-webkit-scrollbar-corner {
   margin-top: 20px;
   background-color: #e3e7f1;
