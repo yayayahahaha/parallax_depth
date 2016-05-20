@@ -127,3 +127,33 @@
 .parallax_container .footer a {
   color: white;
 }
+
+/* line 101, ../sass/style.scss */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* line 105, ../sass/style.scss */
+::-webkit-scrollbar-track {
+  background-color: #ececec;
+}
+
+/* line 108, ../sass/style.scss */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(56, 89, 100, 0.4);
+  border: 2px solid #e3e7f0;
+}
+
+/* line 112, ../sass/style.scss */
+::-webkit-scrollbar-button {
+  height: 0px;
+  background: red;
+  width: 0px;
+}
+
+/* line 117, ../sass/style.scss */
+::-webkit-scrollbar-corner {
+  margin-top: 20px;
+  background-color: #e3e7f1;
+}
