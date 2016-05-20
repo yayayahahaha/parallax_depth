@@ -57,6 +57,9 @@ $h: 100vh;
 		background-image: url("../Y.jpg");
 	}
 	.parallax_layer_5{
+		outline: 0px;
+		border: 0px;
+
 		top: 180%;
 		left: 5%;
 		height: $h*0.3;
@@ -64,6 +67,21 @@ $h: 100vh;
 		background-size: 100% auto;
 		@include transform(rotateZ(-15deg));
 		background-image:url("../T.jpg");
+
+		@include transition(all 0.3s);
+
+		&:hover{
+			cursor:pointer;
+		}
+
+		&:focus{
+			cursor: pointer;
+			@include transform(rotateZ(0deg));
+			top: 130%;
+			left: 10%;
+			width: 80%;
+			height: 80%;
+		}
 	}
 
 	.footer {
