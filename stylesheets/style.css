@@ -1,180 +1,97 @@
-/* line 5, ../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
-
-/* line 22, ../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-html {
-  line-height: 1;
-}
-
-/* line 24, ../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-ol, ul {
-  list-style: none;
-}
-
-/* line 26, ../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* line 28, ../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-
-/* line 30, ../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-q, blockquote {
-  quotes: none;
-}
-/* line 103, ../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-
-/* line 32, ../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-a img {
-  border: none;
-}
-
-/* line 116, ../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-  display: block;
-}
-
-/* line 7, ../sass/style.scss */
+/* line 5, ../sass/style.scss */
 * {
   margin: 0px;
   padding: 0px;
-}
-
-/* line 12, ../sass/style.scss */
-.sensor {
-  height: 100vh;
-  overflow-y: scroll;
-  background: black;
-  width: 100%;
-}
-/* line 18, ../sass/style.scss */
-.sensor .title {
-  font-family: Arial;
-  font-size: 3em;
-  height: 80px;
-  color: white;
-  vertical-align: middle;
-  text-align: center;
-}
-/* line 25, ../sass/style.scss */
-.sensor .title:after {
-  vertical-align: middle;
-  display: inline-block;
-  content: '';
-  height: 100%;
-}
-/* line 32, ../sass/style.scss */
-.sensor .parallax {
-  overflow: hidden;
-  font-family: arial;
-  font-size: 3em;
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  height: 70vh;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  background-size: 120% auto;
-  background-attachment: fixed;
 }
-/* line 43, ../sass/style.scss */
-.sensor .parallax:nth-child(2) {
+
+/* line 10, ../sass/style.scss */
+.parallax_container {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -moz-perspective: 10px;
+  -webkit-perspective: 10px;
+  perspective: 10px;
+  background: black;
+}
+/* line 18, ../sass/style.scss */
+.parallax_container .basic_setting {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 200%;
+  position: absolute;
+  top: 0px;
+}
+/* line 27, ../sass/style.scss */
+.parallax_container .parallax_layer_1 {
+  -moz-transform: translateZ(-1px) rotateZ(3deg);
+  -ms-transform: translateZ(-1px) rotateZ(3deg);
+  -webkit-transform: translateZ(-1px) rotateZ(3deg);
+  transform: translateZ(-1px) rotateZ(3deg);
   background-image: url("../R.jpg");
 }
-/* line 46, ../sass/style.scss */
-.sensor .parallax:nth-child(3) {
-  color: white;
+/* line 31, ../sass/style.scss */
+.parallax_container .parallax_layer_2 {
+  top: -20%;
+  left: 43%;
+  background-position: right;
+  -moz-transform: translateZ(-10px) rotateZ(-2deg);
+  -ms-transform: translateZ(-10px) rotateZ(-2deg);
+  -webkit-transform: translateZ(-10px) rotateZ(-2deg);
+  transform: translateZ(-10px) rotateZ(-2deg);
   background-image: url("../W.jpg");
 }
-/* line 50, ../sass/style.scss */
-.sensor .parallax:nth-child(4) {
+/* line 38, ../sass/style.scss */
+.parallax_container .parallax_layer_3 {
+  top: 10%;
+  left: 20%;
+  -moz-transform: translateZ(-30px) rotateZ(7deg);
+  -ms-transform: translateZ(-30px) rotateZ(7deg);
+  -webkit-transform: translateZ(-30px) rotateZ(7deg);
+  transform: translateZ(-30px) rotateZ(7deg);
   background-image: url("../B.jpg");
 }
-/* line 53, ../sass/style.scss */
-.sensor .parallax:nth-child(5) {
-  color: white;
+/* line 44, ../sass/style.scss */
+.parallax_container .parallax_layer_4 {
+  top: 50%;
+  left: -30%;
+  width: 70vw;
+  height: 70vh;
+  background-size: 100% auto;
+  -moz-transform: translateZ(-5px) rotateZ(15deg);
+  -ms-transform: translateZ(-5px) rotateZ(15deg);
+  -webkit-transform: translateZ(-5px) rotateZ(15deg);
+  transform: translateZ(-5px) rotateZ(15deg);
   background-image: url("../Y.jpg");
 }
-/* line 58, ../sass/style.scss */
-.sensor .footer {
+/* line 53, ../sass/style.scss */
+.parallax_container .parallax_layer_5 {
+  top: 180%;
+  left: 5%;
+  height: 30vh;
+  width: 30vw;
+  background-size: 100% auto;
+  -moz-transform: rotateZ(-15deg);
+  -ms-transform: rotateZ(-15deg);
+  -webkit-transform: rotateZ(-15deg);
+  transform: rotateZ(-15deg);
+  background-image: url("../T.jpg");
+}
+/* line 63, ../sass/style.scss */
+.parallax_container .footer {
+  color: white;
+  width: 100%;
   text-align: center;
-  font-family: Arial;
-  font-size: 1em;
-  height: 80px;
+  position: absolute;
+  top: 210%;
+}
+/* line 71, ../sass/style.scss */
+.parallax_container .footer a {
   color: white;
-}
-/* line 64, ../sass/style.scss */
-.sensor .footer div {
-  display: inline-block;
-  vertical-align: middle;
-  line-height: 1.5em;
-}
-/* line 70, ../sass/style.scss */
-.sensor .footer a {
-  color: white;
-}
-/* line 73, ../sass/style.scss */
-.sensor .footer:after {
-  display: inline-block;
-  content: "";
-  height: 80px;
-  vertical-align: middle;
-}
-
-/* line 81, ../sass/style.scss */
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-/* line 85, ../sass/style.scss */
-::-webkit-scrollbar-track {
-  background-color: #ececec;
-}
-
-/* line 88, ../sass/style.scss */
-::-webkit-scrollbar-thumb {
-  background-color: rgba(56, 89, 100, 0.4);
-  border: 2px solid #e3e7f0;
-}
-
-/* line 92, ../sass/style.scss */
-::-webkit-scrollbar-button {
-  height: 0px;
-  background: red;
-  width: 0px;
-}
-
-/* line 97, ../sass/style.scss */
-::-webkit-scrollbar-corner {
-  margin-top: 20px;
-  background-color: #e3e7f1;
 }
