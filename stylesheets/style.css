@@ -20,15 +20,25 @@
 }
 /* line 18, ../sass/style.scss */
 .parallax_container .basic_setting {
-  border: 1px solid rgba(0, 0, 0, 0.5);
   background-size: auto 100%;
   background-repeat: no-repeat;
   width: 100vw;
   height: 200%;
   position: absolute;
   top: 0px;
+  -webkit-filter: brightness(100%);
+  filter: brightness(100%);
+  -moz-transition: -webkit-filter 0.5s;
+  -o-transition: -webkit-filter 0.5s;
+  -webkit-transition: -webkit-filter 0.5s;
+  transition: -webkit-filter 0.5s;
 }
-/* line 27, ../sass/style.scss */
+/* line 29, ../sass/style.scss */
+.parallax_container .basic_setting:hover {
+  -webkit-filter: brightness(130%);
+  filter: brightness(130%);
+}
+/* line 33, ../sass/style.scss */
 .parallax_container .parallax_layer_1 {
   -moz-transform: translateZ(-1px) rotateZ(3deg);
   -ms-transform: translateZ(-1px) rotateZ(3deg);
@@ -36,7 +46,7 @@
   transform: translateZ(-1px) rotateZ(3deg);
   background-image: url("../R.jpg");
 }
-/* line 31, ../sass/style.scss */
+/* line 37, ../sass/style.scss */
 .parallax_container .parallax_layer_2 {
   top: -20%;
   left: 43%;
@@ -47,7 +57,7 @@
   transform: translateZ(-10px) rotateZ(-2deg);
   background-image: url("../W.jpg");
 }
-/* line 38, ../sass/style.scss */
+/* line 44, ../sass/style.scss */
 .parallax_container .parallax_layer_3 {
   top: 10%;
   left: 20%;
@@ -57,7 +67,7 @@
   transform: translateZ(-30px) rotateZ(7deg);
   background-image: url("../B.jpg");
 }
-/* line 44, ../sass/style.scss */
+/* line 50, ../sass/style.scss */
 .parallax_container .parallax_layer_4 {
   top: 50%;
   left: -30%;
@@ -70,7 +80,7 @@
   transform: translateZ(-5px) rotateZ(15deg);
   background-image: url("../Y.jpg");
 }
-/* line 53, ../sass/style.scss */
+/* line 59, ../sass/style.scss */
 .parallax_container .parallax_layer_5 {
   top: 180%;
   left: 5%;
@@ -83,7 +93,7 @@
   transform: rotateZ(-15deg);
   background-image: url("../T.jpg");
 }
-/* line 63, ../sass/style.scss */
+/* line 69, ../sass/style.scss */
 .parallax_container .footer {
   color: white;
   width: 100%;
@@ -91,7 +101,7 @@
   position: absolute;
   top: 210%;
 }
-/* line 71, ../sass/style.scss */
+/* line 77, ../sass/style.scss */
 .parallax_container .footer a {
   color: white;
 }

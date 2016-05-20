@@ -16,13 +16,19 @@ $h: 100vh;
 	background: black;
 
 	.basic_setting {
-		border: 1px solid rgba(0, 0, 0, 0.5);
 		background-size: auto 100%;
 		background-repeat: no-repeat;
 		width: $w;
 		height: 200%;
 		position: absolute;
 		top: 0px;
+
+		@include filter(brightness(100%));
+		@include transition(-webkit-filter 0.5s);
+
+		&:hover{
+			@include filter(brightness(130%));
+		}
 	}
 	.parallax_layer_1 {
 		@include transform(translateZ(-1px) rotateZ(3deg));
